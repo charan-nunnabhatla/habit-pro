@@ -7,11 +7,8 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import * as React from "react";
-import dayjs, { Dayjs } from "dayjs";
-import Badge from "@mui/material/Badge";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { PickersDay, PickersDayProps } from "@mui/x-date-pickers/PickersDay";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
 
@@ -37,7 +34,7 @@ export default function Home() {
   useEffect(() => {
     const calendarObserver = new ResizeObserver((entries) => {
       console.log(entries);
-      for (let entry of entries) {
+      for (const entry of entries) {
         setCalendarSize({
           width: entry.contentRect.width,
           height: entry.contentRect.height,
@@ -46,7 +43,7 @@ export default function Home() {
     });
 
     const habitListObserver = new ResizeObserver((entries) => {
-      for (let entry of entries) {
+      for (const entry of entries) {
         setHabitListSize({
           width: entry.contentRect.width,
           height: entry.contentRect.height,
@@ -88,23 +85,12 @@ export default function Home() {
 }
 
 function DateCalendarServerRequest() {
-  const renderDays = (day, selectedDays, pickersDayProps) => {
-    return (
-      <Badge
-        key={day.toString()}
-        color="primary"
-        badgeContent={day == dayjs('day') ? "😶‍🌫️" : null}
-        overlap="circular">
-        <PickersDay {...pickersDayProps} />
-      </Badge>
-    );
-  };
+
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DateCalendar
         displayWeekNumber
         loading={false}
-        slots={{ day: renderDays }}
         onChange={(value, state, view) => {
           console.log(value.$M);
           console.log(state);
