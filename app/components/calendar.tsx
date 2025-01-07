@@ -33,9 +33,9 @@ export default function CustomDateCalendar() {
         ref={dateRef}
         onChange={(value, state, view) => {
           setDateVale(value);
-          // console.log(value);
-          // console.log(state);
-          // console.log(view);
+          console.log(value);
+          console.log(state);
+          console.log(view);
         }}
         renderLoading={() => <DayCalendarSkeleton />}
         slots={{
@@ -44,7 +44,7 @@ export default function CustomDateCalendar() {
         slotProps={{
           day: {
             highlightedDays,
-          } as any,
+          } as unknown as  PickersDayProps<Dayjs>,
         }}
       />
     </LocalizationProvider>
