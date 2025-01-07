@@ -10,5 +10,9 @@
 }
 
 html, body{
-  min-width: 1200px;
+  background-color: black;
+  min-height: 100vh;
+  height: 100svh;
+  width: 100%;
 }
+
