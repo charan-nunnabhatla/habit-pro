@@ -1,6 +1,5 @@
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import { atom } from "jotai";
-import { atomWithStorage } from "jotai/utils";
 
 const date = dayjs();
 
