@@ -16,3 +16,9 @@ html, body{
   width: 100%;
 }
 
+input[type='date']::-webkit-calendar-picker-indicator, input[type='time']::-webkit-calendar-picker-indicator{
+  cursor: pointer;
+  /* background-color: black; */
+  font-size: large;
+  font-weight: bolder;
+}
