@@ -13,7 +13,7 @@ export type habitType = {
   createdDate?: Date;
 };
 
-export const currentDateAtom = atom({
+export const customDateAtom = atom({
   month: date.month(),
   year: date.year(),
   date: date.date(),
