@@ -7,11 +7,11 @@ import NewHabitModal from "../modals/new_habit_modal";
 import { habitDataAtom } from "../atoms";
 
 export default function HabitsListContainer() {
-  const userSelectedValues = useAtomValue(habitDataAtom);
+  const habitData = useAtomValue(habitDataAtom);
   return (
-    <div className="relative w-full p-3 bg-orange-300 rounded size-5 h-[45vh] md:w-[45vw] md:h-full overflow-auto">
+    <div className="relative h-full min-w-max w-full p-3 bg-zinc-800 rounded size-5  md:w-[60vw] md:h-full overflow-auto">
       <NewHabitModal />
-      {Array.from(userSelectedValues).map((value, _) => {
+      {Array.from(habitData).map((value) => {
         return (
           <HabitTile
             id={value.id}
