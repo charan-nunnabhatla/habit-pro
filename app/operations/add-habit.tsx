@@ -1,12 +1,12 @@
 import { habitType } from "../atoms";
+import closeModal from "./modal-close-button";
 
 export const addHabit = (
-  setHabitData: React.Dispatch<React.SetStateAction<habitType[]>>,
-  event: React.FormEvent
+  setHabitData: React.Dispatch<React.SetStateAction<habitType[]>>
 ) => {
   let validTitle = false;
 
-  event.preventDefault();
+  // event.preventDefault();
   const title = document.getElementById("title-input") as HTMLInputElement;
   const time = document.getElementById("time-input") as HTMLInputElement;
   const date = document.getElementById("date-input") as HTMLInputElement;
@@ -21,4 +21,6 @@ export const addHabit = (
     completed: false,
   };
   if (validTitle) setHabitData((prev: habitType[]) => prev.concat(newhabit));
+
+  closeModal();
 };

@@ -5,7 +5,7 @@ export default function markHabitComplete(
   id: string
 ) {
   setHabitData((prev) =>
-    prev.map((habit, _) => {
+    prev.map((habit) => {
       return habit.id === id
         ? { ...habit, completed: !habit.completed }
         : habit;
