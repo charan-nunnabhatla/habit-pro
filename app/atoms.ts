@@ -1,8 +1,15 @@
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 import { atom } from "jotai";
 import { atomWithStorage } from "jotai/utils";
 
 const date = dayjs();
+export const customCalendarAtom = atom({
+  month: date.month(),
+  year: date.year(),
+  date: date.date(),
+  totalDays: date.daysInMonth(),
+});
+
 
 export type habitType = {
   id: string;
@@ -10,14 +17,7 @@ export type habitType = {
   time: string;
   date: string;
   completed: boolean;
-  createdDate?: Date;
+  createdDate?: Dayjs;
 };
-
-export const customDateAtom = atom({
-  month: date.month(),
-  year: date.year(),
-  date: date.date(),
-  totalDays: date.daysInMonth(),
-});
 
 export const habitDataAtom = atomWithStorage<habitType[]>("habit-data", []);
