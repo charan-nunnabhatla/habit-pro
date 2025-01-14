@@ -1,6 +1,5 @@
-export default function closeModal() {
-  const dialog = document.getElementById(
-    "new-habit-dialog"
-  ) as HTMLDialogElement;
+export default function closeModal(id: string) {
+  const dialog = document.getElementById(id) as HTMLDialogElement;
+
   dialog.close();
 }
