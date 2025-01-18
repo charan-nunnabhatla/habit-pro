@@ -21,7 +21,7 @@ export default function NotesContainer() {
             className="flex flex-col w-full h-fit p-2 rounded m-1 bg-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.2)]">
             <div className="">
               <div
-                className={`flex items-center text-sm text-gray-500 ${
+                className={`flex items-center capitalize text-sm text-gray-500 ${
                   habit.completed ? "line-through" : ""
                 }`}>
                 {habit.title}
@@ -46,9 +46,6 @@ export default function NotesContainer() {
                   }}
                 />
               </div>
-            </div>
-            <div className="text-gray-500 font-bold">
-              {/* {dayjs(habit.date).format("DD MMM YYYY")} */}
             </div>
           </div>
         ) : null;
