@@ -10,7 +10,6 @@ export const customCalendarAtom = atom({
   totalDays: date.daysInMonth(),
 });
 
-
 export type habitType = {
   id: string;
   title: string;
@@ -18,6 +17,7 @@ export type habitType = {
   date: string;
   completed: boolean;
   createdDate?: Dayjs;
+  notes?: string;
 };
 
 export const habitDataAtom = atomWithStorage<habitType[]>("habit-data", []);
