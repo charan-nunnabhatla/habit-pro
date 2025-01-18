@@ -18,7 +18,7 @@ export default function ModalActionButtons({
   return (
     <div id="action-buttons" className="flex w-full gap-3 p-3 ml-auto ">
       <button
-        className="w-full px-3 py-2 text-xl font-bold text-white transition-all duration-150 rounded bg-emerald-400 hover:bg-emerald-500"
+        className="w-full px-3 py-2 text-xl font-bold text-emerald-800 transition-all duration-150 rounded bg-emerald-400 hover:bg-emerald-500"
         onClick={() => addHabit(setHabitData, { root })}>
         {addName}
       </button>

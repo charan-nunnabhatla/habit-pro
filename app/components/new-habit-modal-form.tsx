@@ -14,12 +14,19 @@ export default function NewHabitModalForm() {
         </label>
         <input
           id="title-input"
-          className="w-full p-1 font-bold text-gray-600 capitalize bg-transparent bg-white rounded outline-none placeholder:text-gray-500"
+          className="w-full p-1 font-bold text-gray-600 capitalize bg-transparent bg-white rounded outline-none placeholder:text-gray-500 focus:ring focus:ring-blue-500"
           placeholder="Enter A Habit Name"
           type="text"
         />
       </div>
       <DateTimePickers />
+      <div className="w-full">
+        <textarea
+          name="notes"
+          id="notes-input"
+          placeholder="Add Notes"
+          className="w-full rounded placeholder:text-gray-500 font-bold p-3 outline-none focus:ring focus:ring-blue-500 min-h-40"></textarea>
+      </div>
       <div className="absolute bottom-0 w-full">
         <ModalActionButtons
           closeModalID="new-habit-dialog"
