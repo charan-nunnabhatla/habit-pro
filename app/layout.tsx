@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Habit Pro",
-  description: "Track All Your Habits With Minimalistic UI",
+  title: "Tasks",
+  description: "",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className="scroll-bar" lang="en">
       <head>
         <meta name="darkreader-lock" />
       </head>
