@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-bar" lang="en">
+    <html className="scroll-bar" lang="en" suppressHydrationWarning>
       <head>
         <meta name="darkreader-lock" />
       </head>
