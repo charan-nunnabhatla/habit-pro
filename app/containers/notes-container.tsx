@@ -1,6 +1,6 @@
 "use client";
 
-import { useAtom, useAtomValue } from "jotai";
+import { useAtom } from "jotai";
 import { habitDataAtom, habitType } from "../atoms";
 import dayjs from "dayjs";
 import { GoDotFill } from "react-icons/go";

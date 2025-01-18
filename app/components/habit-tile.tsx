@@ -3,7 +3,6 @@ import { habitDataAtom, habitType } from "../atoms";
 import dayjs from "dayjs";
 import markHabitComplete from "../operations/completed-habit";
 import deleteHabit from "../operations/delete-habit";
-import { MdDeleteForever } from "react-icons/md";
 
 export default function HabitTile(props: habitType) {
   const setHabitData = useSetAtom(habitDataAtom);

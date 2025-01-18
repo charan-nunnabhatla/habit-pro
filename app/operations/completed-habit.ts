@@ -1,4 +1,3 @@
-import { MouseEventHandler } from "react";
 import { habitType } from "../atoms";
 
 export default function markHabitComplete(
