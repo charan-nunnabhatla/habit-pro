@@ -38,20 +38,30 @@ export default function CalendarContainer() {
     });
   };
 
+  const setToday = () => {
+    const today = dayjs();
+    setCalendar({
+      year: today.year(),
+      month: today.month(),
+      date: today.date(),
+      totalDays: today.daysInMonth(),
+    });
+  };
+
   return (
-    <div className="flex flex-col items-center w-full h-fit md:h-full md:w-fit p-2 bg-zinc-800 rounded">
-      <div className="w-full md:w-[60vw] lg:w-[40vw]">
+    <div className="flex flex-col items-center w-full h-fit p-2 bg-zinc-800 rounded">
+      <div className="w-full md:w-fit lg:w-[40vw]">
         <div className="text-white font-bold flex justify-between py-3 px-5">
           <button
             className="px-9 hover:ring-2 hover:ring-orange-900 duration-200 py-1 rounded bg-orange-300 text-orange-600"
             onClick={prevBtn}>
             Prev
           </button>
-          <span>
+          <span
+            onClick={setToday}
+            className="px-3 whitespace-nowrap flex items-center cursor-pointer">
             {dayjs(
-              `${calendar.year}-${calendar.month + 1}-${
-                calendar.date
-              }`
+              `${calendar.year}-${calendar.month + 1}-${calendar.date}`
             ).format("MMMM YYYY")}
           </span>
           <button
