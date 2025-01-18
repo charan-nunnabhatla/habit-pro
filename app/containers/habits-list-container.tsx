@@ -33,9 +33,10 @@ export default function HabitsListContainer() {
         </div>
       ) : (
         <div className="flex flex-col justify-center items-center h-full w-full text-white font-bold">
-          No Tasks!
-          <br />
-          Click on the Add button to add a task
+          <span className="text-2xl font-bold">No Tasks!</span>
+          <span className="text-sm text-zinc-500">
+            Click on the Add button to add a task
+          </span>
           <Player
             animationData={waitingAnimation}
             loop
