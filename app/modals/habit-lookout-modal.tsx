@@ -49,8 +49,8 @@ export default function HabitLookOutModal({
         <ModalActionButtons
           closeModalID="habit-lookout-modal"
           root={false}
-          addName="Add Now"
-          closeName="Done"
+          addName={`${todayEventDay? 'Add More': 'Add New'}`}
+          closeName="Close"
         />
       </div>
     </dialog>
