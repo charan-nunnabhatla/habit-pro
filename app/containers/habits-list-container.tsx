@@ -5,8 +5,11 @@ import AddNewHabitButton from "../components/add-new-habit-button";
 import HabitTile from "../components/habit-tile";
 import NewHabitModal from "../modals/add-habit-modal";
 import { habitDataAtom } from "../atoms";
-import Player from "react-lottie-player";
+// import Player from "react-lottie-player";
 import waitingAnimation from "../../public/waiting.json";
+import dynamic from "next/dynamic";
+
+const Player = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 export default function HabitsListContainer() {
   const habitData = useAtomValue(habitDataAtom);
