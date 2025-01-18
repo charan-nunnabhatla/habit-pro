@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div
       id="root"
-      className=" grid grid-cols-[1fr] grid-rows-[auto,1fr,1fr] md:grid-rows-[auto,1fr] md:grid-cols-[1fr,1fr] w-full min-h-svh gap-1 lg:w-[70vw] xl:w-[60vw] mx-auto p-1 bg-black rounded">
+      className=" grid grid-cols-[1fr] grid-rows-[auto,1fr,1fr] md:grid-rows-[auto,1fr] md:grid-cols-[1fr,auto] w-full min-h-svh gap-1 justify-center p-1 bg-black rounded">
       <div
         id="calendar"
         className="row-start-1 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2">
@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <div
         id="habitslist"
-        className="row-start-2 md:col-start-2 md:row-start-1 md:row-span-2 md:row-end-3">
+        className="row-start-2 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3">
         <HabitsListContainer />
       </div>
       <div
