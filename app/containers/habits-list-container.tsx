@@ -5,6 +5,8 @@ import AddNewHabitButton from "../components/add-new-habit-button";
 import HabitTile from "../components/habit-tile";
 import NewHabitModal from "../modals/add-habit-modal";
 import { habitDataAtom } from "../atoms";
+import Player from "react-lottie-player";
+import waitingAnimation from "../../public/waiting.json";
 
 export default function HabitsListContainer() {
   const habitData = useAtomValue(habitDataAtom);
@@ -27,10 +29,16 @@ export default function HabitsListContainer() {
           })}
         </div>
       ) : (
-        <div className="flex justify-center items-center h-full w-full text-white font-bold">
+        <div className="flex flex-col justify-center items-center h-full w-full text-white font-bold">
           No Tasks!
           <br />
           Click on the Add button to add a task
+          <Player
+            animationData={waitingAnimation}
+            loop
+            play
+            className="w-full size-3/4 md:size-fit"
+          />
         </div>
       )}
       <AddNewHabitButton />
