@@ -14,6 +14,7 @@ export default function NewHabitModalForm() {
         </label>
         <input
           id="title-input"
+          title="Task Title"
           className="w-full p-1 font-bold text-gray-600 capitalize bg-transparent bg-white rounded outline-none placeholder:text-gray-500 focus:ring focus:ring-blue-500"
           placeholder="Enter A Habit Name"
           type="text"
@@ -23,6 +24,7 @@ export default function NewHabitModalForm() {
       <div className="w-full">
         <textarea
           name="notes"
+          title="Additinal Info"
           id="notes-input"
           placeholder="Add Notes"
           className="w-full rounded placeholder:text-gray-500 font-bold p-3 outline-none focus:ring focus:ring-blue-500 min-h-40"></textarea>
