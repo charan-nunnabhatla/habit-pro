@@ -12,7 +12,18 @@ const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 export default function NotesContainer() {
   const [habitsData, setHabitData] = useAtom(habitDataAtom);
+
+  let habitsNotes = habitsData.map((habit) => {
+    return habit.notes;
+  });
+
+  habitsNotes = habitsNotes.filter((value) => value !== "");
+
+  console.log("Notes");
+  console.log(habitsNotes);
+
   let key = "";
+
   return (
     <div
       key={key}
@@ -21,7 +32,7 @@ export default function NotesContainer() {
       <span className=" text-sm text-zinc-500 font-bold">
         Additional Info While Creating A Task
       </span>
-      {habitsData.length > 0 ? (
+      {habitsNotes.length > 0 ? (
         Array.from(habitsData).map((habit: habitType) => {
           key = habit.id;
           return habit.notes ? (
@@ -60,7 +71,7 @@ export default function NotesContainer() {
           ) : null;
         })
       ) : (
-        <div key={key} className="my-auto">
+        <div key={key} className="my-auto lg:size-1/2">
           <Lottie animationData={noTasks} play loop />
         </div>
       )}
