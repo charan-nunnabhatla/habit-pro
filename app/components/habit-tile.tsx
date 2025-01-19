@@ -9,7 +9,7 @@ export default function HabitTile(props: habitType) {
   return (
     <div
       onClick={(event) => markHabitComplete(setHabitData, props.id, event)}
-      className={`mb-3 flex flex-col h-fit w-full lg:min-w-[20rem] duration-150 cursor-pointer bg-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.2)] rounded group`}>
+      className={`mb-3 flex flex-col h-fit min-w-[20rem] w-full lg:min-w-[20rem] duration-150 cursor-pointer bg-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.2)] rounded group`}>
       <div className={`flex flex-col w-full text-white px-3 py-2 rounded`}>
         <div className="mr-auto">
           <input
