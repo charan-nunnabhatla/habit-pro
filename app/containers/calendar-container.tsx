@@ -4,6 +4,7 @@ import { useAtom } from "jotai";
 import CustomDateCalendar from "../components/calendar";
 import dayjs from "dayjs";
 import { customCalendarAtom } from "../atoms";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 export default function CalendarContainer() {
   const [calendar, setCalendar] = useAtom(customCalendarAtom);
@@ -53,21 +54,21 @@ export default function CalendarContainer() {
       <div className="w-full md:w-fit lg:w-[40vw]">
         <div className="text-white font-bold flex justify-between py-3 px-5">
           <button
-            className="px-9 hover:ring-2 hover:ring-orange-900 duration-200 py-1 rounded bg-orange-300 text-orange-600"
+            className="hover:ring-2 hover:ring-orange-900 duration-200 px-6 py-1 rounded bg-orange-300 text-orange-600 text-2xl font-bold"
             onClick={prevBtn}>
-            Prev
+            <GrFormPrevious />
           </button>
           <span
             onClick={setToday}
-            className="px-3 whitespace-nowrap flex items-center cursor-pointer">
+            className="px-6 whitespace-nowrap flex items-center cursor-pointer">
             {dayjs(
               `${calendar.year}-${calendar.month + 1}-${calendar.date}`
             ).format("MMMM YYYY")}
           </span>
           <button
-            className="px-9 hover:ring-2 hover:ring-orange-900 duration-200 py-1 rounded bg-orange-300 text-orange-600"
+            className="px-6 hover:ring-2 hover:ring-orange-900 duration-200 py-1 rounded bg-orange-300 text-orange-600 text-2xl font-bold"
             onClick={nextBtn}>
-            Next
+            <GrFormNext />
           </button>
         </div>
         <CustomDateCalendar />
