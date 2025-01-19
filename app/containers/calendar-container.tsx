@@ -54,7 +54,7 @@ export default function CalendarContainer() {
       <div className="w-full md:w-fit lg:w-[40vw]">
         <div className="text-white font-bold flex justify-between py-3 px-5">
           <button
-            className="hover:ring-2 hover:ring-orange-900 duration-200 px-6 py-1 rounded bg-orange-300 text-orange-600 text-2xl font-bold"
+            className=" duration-150 px-6 py-1 rounded bg-white/20 text-white hover:bg-white/30  text-2xl font-bold"
             onClick={prevBtn}>
             <GrFormPrevious />
           </button>
@@ -66,7 +66,7 @@ export default function CalendarContainer() {
             ).format("MMMM YYYY")}
           </span>
           <button
-            className="px-6 hover:ring-2 hover:ring-orange-900 duration-200 py-1 rounded bg-orange-300 text-orange-600 text-2xl font-bold"
+            className="px-6 duration-150 py-1 rounded bg-white/20 text-white hover:bg-white/30 text-2xl font-bold"
             onClick={nextBtn}>
             <GrFormNext />
           </button>
