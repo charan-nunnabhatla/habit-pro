@@ -1,7 +1,7 @@
 "use client";
 
 import { useAtom } from "jotai";
-import { habitDataAtom, habitType } from "../atoms";
+import { TasksDataAtom, TaskType } from "../atoms";
 import dayjs from "dayjs";
 import { GoDotFill } from "react-icons/go";
 // import Lottie from "react-lottie-player";
@@ -11,7 +11,7 @@ import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 export default function NotesContainer() {
-  const [habitsData, setHabitData] = useAtom(habitDataAtom);
+  const [habitsData, setHabitData] = useAtom(TasksDataAtom);
 
   let habitsNotes = habitsData.map((habit) => {
     return habit.notes;
@@ -33,7 +33,7 @@ export default function NotesContainer() {
         Additional Info While Creating A Task
       </span>
       {habitsNotes.length > 0 ? (
-        Array.from(habitsData).map((habit: habitType) => {
+        Array.from(habitsData).map((habit: TaskType) => {
           key = habit.id;
           return habit.notes ? (
             <div
@@ -55,8 +55,8 @@ export default function NotesContainer() {
                     value={habit.notes}
                     className="scroll-bar resize-none h-auto w-full bg-transparent focus:underline border-none text-zinc-200 text-sm outline-none"
                     onChange={(e) => {
-                      setHabitData((habits: habitType[]) => {
-                        return habits.map((habit1: habitType) => {
+                      setHabitData((habits: TaskType[]) => {
+                        return habits.map((habit1: TaskType) => {
                           if (habit1.id === habit.id) {
                             return { ...habit1, notes: e.target.value };
                           }

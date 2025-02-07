@@ -1,6 +1,6 @@
 import { useSetAtom } from "jotai";
 import { addHabit } from "../operations/add-habit";
-import { habitDataAtom } from "../atoms";
+import { TasksDataAtom } from "../atoms";
 import closeModal from "../operations/modal-close-button";
 
 export default function ModalActionButtons({
@@ -14,7 +14,7 @@ export default function ModalActionButtons({
   closeName: string;
   addName: string;
 }) {
-  const setHabitData = useSetAtom(habitDataAtom);
+  const setHabitData = useSetAtom(TasksDataAtom);
   return (
     <div id="action-buttons" className="flex w-full gap-3 p-3 ml-auto ">
       <button

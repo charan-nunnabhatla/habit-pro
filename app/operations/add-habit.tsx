@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { habitType } from "../atoms";
+import { TaskType } from "../atoms";
 import closeModal from "./modal-close-button";
 import { setDefaultValues } from "../components/add-new-habit-button";
 
@@ -12,7 +12,7 @@ function generateUUID() {
 }
 
 export const addHabit = (
-  setHabitData: React.Dispatch<React.SetStateAction<habitType[]>>,
+  setHabitData: React.Dispatch<React.SetStateAction<TaskType[]>>,
   { root = false }: { root: boolean }
 ) => {
   const uuid = generateUUID();
@@ -40,7 +40,7 @@ export const addHabit = (
 
   if (title.value) validTitle = true;
 
-  const newhabit: habitType = {
+  const newhabit: TaskType = {
     id: uuid,
     title: title.value,
     time: time.value,
@@ -49,7 +49,7 @@ export const addHabit = (
     createdDate: dayjs(),
     notes: notes.value,
   };
-  if (validTitle) setHabitData((prev: habitType[]) => prev.concat(newhabit));
+  if (validTitle) setHabitData((prev: TaskType[]) => prev.concat(newhabit));
 
   closeModal("new-habit-dialog");
 };

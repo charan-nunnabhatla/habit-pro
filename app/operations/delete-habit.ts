@@ -1,10 +1,10 @@
-import { habitType } from "../atoms";
+import { TaskType } from "../atoms";
 
 export default function deleteHabit(
-  setHabitData: React.Dispatch<React.SetStateAction<habitType[]>>,
+  setHabitData: React.Dispatch<React.SetStateAction<TaskType[]>>,
   id: string
 ) {
-  setHabitData((prev: habitType[]) => {
+  setHabitData((prev: TaskType[]) => {
     console.log(prev);
     return prev.filter((habit) => {
       console.log("Habit");

@@ -1,14 +1,14 @@
 "use client";
 
 import { useAtom, useAtomValue } from "jotai";
-import { customCalendarAtom, habitDataAtom } from "../atoms";
+import { customCalendarAtom, TasksDataAtom } from "../atoms";
 import HabitLookOutModal from "../modals/habit-lookout-modal";
 import dayjs from "dayjs";
 import { useState } from "react";
 
 export default function CustomDateCalendar() {
   const [calendar, setCalendar] = useAtom(customCalendarAtom);
-  const habitData = useAtomValue(habitDataAtom);
+  const habitData = useAtomValue(TasksDataAtom);
   const [isEventDay, setIsEventDay] = useState(0);
 
   const presentDay = (index: number) =>

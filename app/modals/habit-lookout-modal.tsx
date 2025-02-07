@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { customCalendarAtom, habitDataAtom } from "../atoms";
+import { customCalendarAtom, TasksDataAtom } from "../atoms";
 import { useAtomValue } from "jotai";
 import ModalActionButtons from "../components/modal-action-buttons";
 // import Lottie from "react-lottie-player";
@@ -16,7 +16,7 @@ export default function HabitLookOutModal({
   index = 0,
 }: habitLookOutModalType) {
   const calendar = useAtomValue(customCalendarAtom);
-  const habitData = useAtomValue(habitDataAtom);
+  const habitData = useAtomValue(TasksDataAtom);
 
   const dates = habitData.map(({ date }) => date);
 

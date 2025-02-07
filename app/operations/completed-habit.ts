@@ -1,7 +1,7 @@
-import { habitType } from "../atoms";
+import { TaskType } from "../atoms";
 
 export default function markHabitComplete(
-  setHabitData: React.Dispatch<React.SetStateAction<habitType[]>>,
+  setHabitData: React.Dispatch<React.SetStateAction<TaskType[]>>,
   id: string,
   event?: React.MouseEvent<HTMLDivElement>
 ) {

@@ -1,11 +1,11 @@
 import { useSetAtom } from "jotai";
-import { habitDataAtom, habitType } from "../atoms";
+import { TasksDataAtom, TaskType } from "../atoms";
 import dayjs from "dayjs";
 import markHabitComplete from "../operations/completed-habit";
 import deleteHabit from "../operations/delete-habit";
 
-export default function HabitTile(props: habitType) {
-  const setHabitData = useSetAtom(habitDataAtom);
+export default function HabitTile(props: TaskType) {
+  const setHabitData = useSetAtom(TasksDataAtom);
   return (
     <div
       onClick={(event) => markHabitComplete(setHabitData, props.id, event)}
@@ -19,8 +19,8 @@ export default function HabitTile(props: habitType) {
             type="text"
             value={props.title}
             onChange={(e) => {
-              setHabitData((habits: habitType[]) =>
-                habits.map((habit: habitType) => {
+              setHabitData((habits: TaskType[]) =>
+                habits.map((habit: TaskType) => {
                   if (habit.id === props.id) {
                     return { ...habit, title: e.target.value.toString() };
                   }
