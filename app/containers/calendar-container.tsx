@@ -54,6 +54,7 @@ export default function CalendarContainer() {
       <div className="w-full md:w-fit lg:w-[40vw]">
         <div className="text-white font-bold flex justify-between py-3 px-5">
           <button
+          aria-label="Previous Month"
             className=" duration-150 px-6 py-1 rounded bg-white/20 text-white hover:bg-white/30  text-2xl font-bold"
             onClick={prevBtn}>
             <GrFormPrevious />
@@ -66,6 +67,7 @@ export default function CalendarContainer() {
             ).format("MMMM YYYY")}
           </span>
           <button
+          aria-label="Next Button"
             className="px-6 duration-150 py-1 rounded bg-white/20 text-white hover:bg-white/30 text-2xl font-bold"
             onClick={nextBtn}>
             <GrFormNext />
