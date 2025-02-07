@@ -10,7 +10,7 @@ export const customCalendarAtom = atom({
   totalDays: date.daysInMonth(),
 });
 
-export type habitType = {
+export type TaskType = {
   id: string;
   title: string;
   time: string;
@@ -20,4 +20,4 @@ export type habitType = {
   notes?: string;
 };
 
-export const habitDataAtom = atomWithStorage<habitType[]>("habit-data", []);
+export const TasksDataAtom = atomWithStorage<TaskType[]>("habit-data", []);
