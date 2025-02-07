@@ -14,7 +14,7 @@ const Player = dynamic(() => import("react-lottie-player"), { ssr: false });
 export default function HabitsListContainer() {
   const habitData = useAtomValue(TasksDataAtom);
   return (
-    <div className="flex flex-col scroll-bar relative h-full w-full lg:w-max p-3 bg-zinc-800 rounded duration-1000  md:w-auto md:h-full overflow-auto">
+    <div className="flex flex-col scroll-bar relative h-full w-full lg:w-max p-3 bg-zinc-800 rounded duration-1000  md:w-[fit-content] md:h-full overflow-auto">
       <NewHabitModal />
       {habitData.length > 0 ? (
         <div className="">
@@ -32,18 +32,17 @@ export default function HabitsListContainer() {
           })}
         </div>
       ) : (
-        <div className="flex flex-col justify-center items-center h-full w-full text-white font-bold">
-          <span className="text-2xl font-bold">No Tasks!</span>
-          <span className="text-sm text-zinc-500">
-            Click on the Add button to add a task
-          </span>
-          <figure aria-label="a animated women looking at her laptop">
-            <Player
-              animationData={waitingAnimation}
-              loop
-              play
-              className="w-full size-3/4 md:size-fit"
-            />
+        <div className="flex flex-col justify-center items-center h-full md:w-[25rem] lg:w-[30rem] text-white font-bold">
+          <section className=" text-center mt-auto">
+            <h1 className="text-2xl font-bold">No Tasks!</h1>
+            <h4 className="text-sm text-zinc-500">
+              Click on the Add button to add a task
+            </h4>
+          </section>
+          <figure
+            aria-label="a animated women looking at her laptop"
+            className="my-auto w-full ">
+            <Player animationData={waitingAnimation} loop play />
           </figure>
         </div>
       )}

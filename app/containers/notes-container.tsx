@@ -71,9 +71,9 @@ export default function NotesContainer() {
           ) : null;
         })
       ) : (
-        <div key={key} className="my-auto lg:size-1/2">
+        <figure key={key} aria-label="animated searching placeholder" className="my-auto lg:size-1/2">
           <Lottie animationData={noTasks} play loop />
-        </div>
+        </figure>
       )}
     </div>
   );
