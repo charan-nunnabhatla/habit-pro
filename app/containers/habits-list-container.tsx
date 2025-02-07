@@ -33,7 +33,7 @@ export default function HabitsListContainer() {
         </div>
       ) : (
         <div className="flex flex-col justify-center items-center h-full md:w-[25rem] lg:w-[30rem] font-bold">
-          <section className=" text-center mt-auto">
+          <section className=" text-center mt-[30%]">
             <h3 className="text-2xl text-white font-bold">No Tasks!</h3>
             <h4 className="text-sm text-white opacity-75">
               Click on the Add button to add a task
