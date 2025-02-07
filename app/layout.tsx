@@ -13,8 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tasks",
-  description: "",
+  title: "Tasks Pro",
+  description: "Organize Your Tasks With Morden Minimalistic UI",
+  openGraph: {
+    title: "Tasks Pro",
+    description: "Organize Your Tasks With Morden Minimalistic UI",
+    type: "website",
+    url: "https://tasks-pro.vercel.app/",
+    images: [{
+      url: 'https://tasks-pro.vercel.app/tasks-pro.avif',
+      width: 1200,
+      height: 630,
+      alt: "Image of a Tasks Pro webpage"
+    }]
+  },
 };
 
 export default function RootLayout({
