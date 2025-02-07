@@ -29,7 +29,7 @@ export default function NotesContainer() {
       key={key}
       className="flex items-center flex-col p-3 h-full min-h-full w-full bg-zinc-800 rounded">
       <h1 className="text-2xl text-white font-bold">Notes</h1>
-      <span className=" text-sm text-zinc-500 font-bold">
+      <span className=" text-sm text-white opacity-75 font-bold">
         Additional Info While Creating A Task
       </span>
       {habitsNotes.length > 0 ? (
