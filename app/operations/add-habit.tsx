@@ -16,7 +16,7 @@ export const addHabit = (
   { root = false }: { root: boolean }
 ) => {
   const uuid = generateUUID();
-  console.log(uuid);
+  // console.log(uuid);
 
   let validTitle = false;
 

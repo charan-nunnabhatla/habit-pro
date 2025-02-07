@@ -19,8 +19,8 @@ export default function NotesContainer() {
 
   habitsNotes = habitsNotes.filter((value) => value !== "");
 
-  console.log("Notes");
-  console.log(habitsNotes);
+  // console.log("Notes");
+  // console.log(habitsNotes);
 
   let key = "";
 

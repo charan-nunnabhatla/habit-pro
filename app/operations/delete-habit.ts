@@ -5,10 +5,10 @@ export default function deleteHabit(
   id: string
 ) {
   setHabitData((prev: TaskType[]) => {
-    console.log(prev);
+    // console.log(prev);
     return prev.filter((habit) => {
-      console.log("Habit");
-      console.log(habit);
+      // console.log("Habit");
+      // console.log(habit);
       return id !== habit.id;
     });
   });
