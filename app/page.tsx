@@ -7,7 +7,7 @@ export default function Home() {
     <main className="min-h-svh w-screen lg:w-[60vw] mx-auto">
       <div
         id="root"
-        className=" grid grid-cols-[1fr] grid-rows-[auto,1fr,1fr] md:grid-rows-[auto,1fr] md:grid-cols-[1fr,fit-content] w-full min-h-svh gap-1 justify-center p-1 bg-black rounded">
+        className=" grid grid-cols-[1fr] grid-rows-[auto,1fr,1fr] md:grid-rows-[auto,1fr] md:grid-cols-[fit-content,fit-content] w-full min-h-svh gap-1 justify-center p-1 bg-black rounded">
         <section
           id="calendar"
           className="row-start-1 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2">
