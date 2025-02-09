@@ -38,6 +38,7 @@ export default function RootLayout({
     <html className="scroll-bar" lang="en" suppressHydrationWarning>
       <head>
         <meta name="darkreader-lock" />
+        <meta name="google-site-verification" content="MQovkjs-BtgyOybQXqfHyHh7p1SU-8DtYWVC-HfHfeg" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
