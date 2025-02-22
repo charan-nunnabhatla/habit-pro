@@ -18,6 +18,7 @@ export default function NewHabitModalForm() {
           className="w-full p-1 font-bold text-gray-600 capitalize bg-transparent bg-white rounded outline-none placeholder:text-gray-500 focus:ring focus:ring-blue-500"
           placeholder="Enter A Habit Name"
           type="text"
+          required
         />
       </div>
       <DateTimePickers />
